@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate1?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <!--<mapping resource="Profesor.hbm.xml"/>-->
+    <mapping class="com.joels.hibernate.dominio.Profesor"/>
+    <mapping class="com.joels.hibernate.dominio.Direccion"/>
+    <mapping class="com.joels.hibernate.dominio.CorreoElectronico"/>
+    <mapping class="com.joels.hibernate.dominio.Modulo"/>
+    <mapping class="com.joels.hibernate.dominio.Ciclo"/>
+    <mapping class="com.joels.hibernate.dominio.Municipio"/>
+
+  </session-factory>
+</hibernate-configuration>
